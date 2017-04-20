@@ -11,3 +11,5 @@
         <title>Samjobb</title>
     </head>
     <body>
+        <!-- Start of container div, ends in footer.php -->
+        <div class="container">
