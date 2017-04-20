@@ -17,3 +17,5 @@ add_filter('admin_footer_text', function () {
 
     return reset($text);
 });
+
+add_theme_support('plate-footer', 'Thank you for creating with WordPlate.');
