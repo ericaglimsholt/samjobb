@@ -1,0 +1,34 @@
+{
+    "name": "wordplate/plate",
+    "description": "A framework plugin for WordPlate",
+    "keywords": ["wordplate", "plate", "wordpress", "plugin"],
+    "type": "wordpress-plugin",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vincent Klaiber",
+            "email": "hello@vinkla.com",
+            "homepage": "https://vinkla.com"
+        },
+        {
+            "name": "Chris Andersson",
+            "email": "hello@puredazzle.se",
+            "homepage": "https://puredazzle.se"
+        }
+
+    ],
+    "require": {
+        "php": "^7.0",
+        "illuminate/support": "^5.4"
+    },
+    "config": {
+        "preferred-install": "dist"
+    },
+    "extra":{
+        "branch-alias": {
+            "dev-master": "2.2-dev"
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
