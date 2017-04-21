@@ -1,11 +1,16 @@
 {
+    "name": "SamJobb",
+    "description": "A Wordpress site build for SamJobb",
+    "author": "Erica Glimsholt <erica.glimsholt@handelsmarketing.com>",
     "private": true,
     "scripts": {
         "dev": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
         "watch": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
-        "production": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+        "production": "node node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "build:styles": "node-sass /public/themes/samjobb/assets/styles/main.scss | cleancss --output /public/themes/samjobb/style.css"
     },
     "devDependencies": {
-        "laravel-mix": "^0.8.1"
+        "laravel-mix": "^0.8.1",
+        "node-sass": "^4.3.0"
     }
 }

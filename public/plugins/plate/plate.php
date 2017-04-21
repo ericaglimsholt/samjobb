@@ -34,7 +34,6 @@ add_action('after_setup_theme', function () {
 // Remove menu items.
 add_theme_support('plate-menu', [
    'comments',
-   'dashboard',
    'links',
    'media',
 ]);
