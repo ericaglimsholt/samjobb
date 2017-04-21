@@ -9,6 +9,9 @@
         <link rel="stylesheet" href="<?php wp_enqueue_style( 'style', get_stylesheet_uri() ); ?>">
         <?php wp_head(); ?>
 
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans|Ubuntu:700,500" rel="stylesheet">
+
         <!-- Bootstrap CSS -->
        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
@@ -24,7 +27,14 @@
                 <a class="navbar-brand" href="<?php echo site_url(); ?>"><img class="logotype-image" src="<?php echo get_template_directory_uri() ?>/assets/img/logotype.png"/></a>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-auto">
-                            <?php foreach (get_pages() as $page): ?>
+                            <?php
+                            $pages = array (
+                                'sort_order' => 'asc',
+                                'sort_column' => 'post_date'
+                                )
+                             ?>
+                            <?php foreach (get_pages($pages) as $page): ?>
+
                                 <li class="nav-item <?php if (is_page($page)) { echo 'active'; } ?>">
                                     <a class="nav-link" href="<?php echo get_permalink($page); ?>">
                                         <?php echo $page->post_title; ?>
