@@ -34,7 +34,6 @@
                                 )
                              ?>
                             <?php foreach (get_pages($pages) as $page): ?>
-
                                 <li class="nav-item <?php if (is_page($page)) { echo 'active'; } ?>">
                                     <a class="nav-link" href="<?php echo get_permalink($page); ?>">
                                         <?php echo $page->post_title; ?>
