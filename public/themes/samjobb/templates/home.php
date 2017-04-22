@@ -37,8 +37,35 @@ Template Name: Home
                     </button>
                 </a>
             </div>
-
         </div>
+
+        </div> <!-- End of container div -->
+        <!-- What we offer-->
+        <div class="what_we_offer">
+            <div class="container">
+            <h2><?php the_field('title_what_we_offer'); ?></h2>
+            <div class="row we-offer">
+                <div class="col-md-6 what-we-offer">
+                    <h3><?php the_field('title_what_we_offer_1'); ?></h3>
+                    <?php the_field('description_what_we_offer_1'); ?>
+                </div>
+                <div class="col-md-6 we-offer">
+                    <h3><?php the_field('title_what_we_offer_2'); ?></h3>
+                    <?php the_field('description_what_we_offer_2'); ?>
+                </div>
+            </div>
+            <div class="row we-offer">
+                <div class="col-md-6 what-we-offer">
+                    <h3><?php the_field('title_what_we_offer_3'); ?></h3>
+                    <?php the_field('description_what_we_offer_3'); ?>
+                </div>
+                <div class="col-md-6 we-offer">
+                    <h3><?php the_field('title_what_we_offer_4'); ?></h3>
+                    <?php the_field('description_what_we_offer_4'); ?>
+                </div>
+            </div>
+        </div>
+
 
 
 	<?php endwhile; // end of the loop. ?>

@@ -24,7 +24,9 @@
                 <span class="navbar-toggler-icon"></span>
             </button><!-- /navbar-toggler -->
             <div class="container">
-                <a class="navbar-brand" href="<?php echo site_url(); ?>"><img class="logotype-image" src="<?php echo get_template_directory_uri() ?>/assets/img/logotype.png"/></a>
+                <a class="navbar-brand" href="<?php echo site_url(); ?>">
+                    <img class="logotype-image" src="<?php echo get_template_directory_uri() ?>/assets/img/logotype.png"/>
+                </a>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ml-auto">
                             <?php
