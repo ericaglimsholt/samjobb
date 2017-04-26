@@ -29,4 +29,27 @@ Template Name: Stöd & Matchning
         </div>
     </div>
 
+<!-- Page information with contact-->
+    <div class="row info">
+        <div class="col-md-8 home info">
+            <h2><?php the_field('title_info'); ?></h2>
+            <?php if( have_rows('info') ): ?>
+                <?php while ( have_rows('info') ) : the_row(); ?>
+                    <p><?php the_sub_field('description_info'); ?></p>
+                    <h3><?php the_sub_field('hilight_title_info'); ?></h3>
+                <?php endwhile; ?>
+            <?php endif; ?>
+        </div>
+        <div class="col-md-4 info">
+            <h2><?php the_field('title_info_contact'); ?></h2>
+            <?php if( have_rows('contact_info') ): ?>
+                <?php while ( have_rows('contact_info') ) : the_row(); ?>
+                    <img class="info-contact-img" src="<?php the_sub_field('info_contact_img'); ?>" />
+                    <p><?php the_sub_field('info_contact_name_phone'); ?></p>
+                    <p><?php the_sub_field('info_contact_email'); ?></p>
+                <?php endwhile; ?>
+            <?php endif; ?>
+        </div>
+    </div>
+
 <?php get_footer(); ?>
