@@ -65,6 +65,12 @@ Template Name: Home
                 </div>
             </div>
         </div>
+    </div>
+
+        <!-- News-->
+        <div class="news">
+            <h2><?php the_field('title_news'); ?></h2>
+        </div>
 
 
 
