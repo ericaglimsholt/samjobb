@@ -53,6 +53,19 @@ Template Name: Om oss
         </div>
     </div>
 
+<div class="container">
+
+<!-- Opening info reversed -->
+    <div class="row opening-info">
+        <div class="col-md-7 home opening-info">
+            <h2><?php the_field('title_opening_info_reversed'); ?></h2>
+            <p><?php the_field('description_opening_info_reversed'); ?></p>
+        </div>
+        <div class="col-md-5 home opening-info">
+            <img class="home-opening-info" src="<?php the_field('image_opening_info_reversed'); ?>" />
+        </div>
+    </div>
+
 
 
 <?php get_footer(); ?>
