@@ -23,7 +23,9 @@ Template Name: Kontakt
 <div class="row">
     <div class="col-md-6 contact">
         <h2><?php the_field('title'); ?></h2>
-        <?php the_field('forms'); ?>
+        <div class="forms">
+            <?php the_field('forms'); ?>
+        </div>
     </div>
     <div class="col-md-6 contact">
         <p><?php the_field('description'); ?></p>
