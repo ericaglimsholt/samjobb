@@ -64,18 +64,9 @@ $the_query = new WP_Query( $employees );
             <hr>
             <p class="employee-description"><?php the_field('description'); ?></p>
 
-            <?php if( have_rows('social_medias') ): ?>
-                <?php  while ( have_rows('social_medias') ) : the_row(); ?>
-                    <?php if( get_row_layout() == 'mail' ): ?>
-                        <h1><?php the_sub_field('mail_link'); ?></h1>
-                    <?php endif;
-                endwhile;
-            endif; ?>
-
-
-
-
-
+            <a href="mailto:<?php the_field('mail_address'); ?>?" target="_top">
+                <button type="button" name="button-mini">Maila mig</button>
+            </a>
         </div>
     	<?php endwhile; ?>
     <?php endif; ?>
