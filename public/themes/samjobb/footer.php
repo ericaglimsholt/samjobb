@@ -6,7 +6,7 @@
         <div class="row">
             <div class="col-md-4 footer">
                 <h5>Om SamJobb</h5>
-                <p>Lorem ipsum dolor sit amet, consectetur you adipiscing you elit.Etiam vel laoreet justo, egetss eleifend lectus.Its Mausaccumsan sem isss.</p>
+                <p>Vårt uppdrag är att hjälpa personer som står utanför arbetsmarknaden att få en meningsfull sysselsättning samt stöd och hjälp på vägen till ett arbete.</p>
                 <h5>Följ SamJobb</h5>
             </div>
             <div class="col-md-4 footer">
