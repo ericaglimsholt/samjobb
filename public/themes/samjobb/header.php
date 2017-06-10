@@ -19,6 +19,9 @@
 
     </head>
     <body>
+
+
+
         <nav class="navbar navbar-toggleable-md navbar-light bg-faded mb-3">
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -28,7 +31,9 @@
                     <img class="logotype-image" src="<?php echo get_template_directory_uri() ?>/assets/img/logotype.png"/>
                 </a>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                                <?php wp_nav_menu( array( 'theme_location' => 'main' ) ); ?>
                         <ul class="navbar-nav ml-auto">
+
                             <?php
                             $pages = array (
                                 'sort_order' => 'asc',
@@ -38,7 +43,8 @@
                             <?php foreach (get_pages($pages) as $page): ?>
                                 <li class="nav-item <?php if (is_page($page)) { echo 'active'; } ?>">
                                     <a class="nav-link" href="<?php echo get_permalink($page); ?>">
-                                        <?php echo $page->post_title; ?>
+                                        <?php // echo $page->post_title; ?>
+
                                     </a><!-- /nav-link -->
                                 </li><!-- /nav-item -->
                             <?php endforeach; ?>
