@@ -22,6 +22,7 @@
             </div>
             <div class="col-md-4 footer">
                 <h5>Kontakta oss</h5>
+                <?php echo do_shortcode( '[contact-form-7 id="292" title="Footer kontaktformulär"]' ); ?>
             </div>
         </div>
     </div>

@@ -13,7 +13,7 @@ Template Name: Hem
     <img class="home-header" src="<?php the_field('header'); ?>" />
     <div class="header-content">
         <h1><?php the_field('welcome_text'); ?></h1>
-        <p><?php the_field('description_text'); ?></p>
+        <?php the_field('description_text'); ?>
     </div>
 </div>
 
