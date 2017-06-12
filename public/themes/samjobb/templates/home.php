@@ -51,8 +51,21 @@ Template Name: Hem
             </div>
         </div>
     </div>
-
 <div class="container">
+<div class="row partners">
+    <?php if( have_rows('logotypes_partners') ): ?>
+        <?php while ( have_rows('logotypes_partners') ) : the_row(); ?>
+
+                <div class="col-md-2 partners">
+                    <img src="<?php the_sub_field('img_partners'); ?>" alt="">
+                </div>
+
+
+        <?php endwhile; ?>
+    <?php endif; ?>
+</div>
+
+
 
 
 <?php get_footer(); ?>
