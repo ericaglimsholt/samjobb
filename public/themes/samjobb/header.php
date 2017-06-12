@@ -30,8 +30,10 @@
                 <a class="navbar-brand" href="<?php echo site_url(); ?>">
                     <img class="logotype-image" src="<?php echo get_template_directory_uri() ?>/assets/img/logotype.png"/>
                 </a>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                                <?php wp_nav_menu( array( 'theme_location' => 'main' ) ); ?>
+                    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                        <ul class="ml-auto">
+                            <?php wp_nav_menu( array( 'theme_location' => 'main' ) ); ?>
+                        </ul>
                     </div><!-- /collapse -->
                 </div>
         </nav><!-- /navbar -->
