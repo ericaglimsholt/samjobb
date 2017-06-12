@@ -20,8 +20,6 @@
     </head>
     <body>
 
-
-
         <nav class="navbar navbar-toggleable-md navbar-light bg-faded mb-3">
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -30,9 +28,10 @@
                 <a class="navbar-brand" href="<?php echo site_url(); ?>">
                     <img class="logotype-image" src="<?php echo get_template_directory_uri() ?>/assets/img/logotype.png"/>
                 </a>
-                    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <div class="collapse navbar-collapse " id="menu-header-menu">
                         <ul class="ml-auto">
-                            <?php wp_nav_menu( array( 'theme_location' => 'main' ) ); ?>
+
+                            <?php wp_nav_menu( array( 'container_class' => '','container' => '',  'menu' => 'Main', 'walker'=> new DD_Wolker_Menu ) );?>
                         </ul>
                     </div><!-- /collapse -->
                 </div>
