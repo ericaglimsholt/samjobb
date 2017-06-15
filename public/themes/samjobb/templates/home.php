@@ -51,19 +51,24 @@ Template Name: Hem
             </div>
         </div>
     </div>
-<div class="container">
-<div class="row partners">
-    <?php if( have_rows('logotypes_partners') ): ?>
-        <?php while ( have_rows('logotypes_partners') ) : the_row(); ?>
 
-                <div class="col-md-2 partners">
-                    <img src="<?php the_sub_field('img_partners'); ?>" alt="">
-                </div>
-
-
-        <?php endwhile; ?>
-    <?php endif; ?>
+<div class="container news">
+    <!-- SnapWidget -->
+    <h2>Senaste från våra sociala medier</h2>
+<script src="https://snapwidget.com/js/snapwidget.js"></script>
+<iframe src="https://snapwidget.com/embed/396705" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; "></iframe>
 </div>
+<hr>
+<div class="container">
+    <div class="row partners">
+        <?php if( have_rows('logotypes_partners') ): ?>
+            <?php while ( have_rows('logotypes_partners') ) : the_row(); ?>
+                    <div class="col-md-2 partners">
+                        <img src="<?php the_sub_field('img_partners'); ?>" alt="">
+                    </div>
+            <?php endwhile; ?>
+        <?php endif; ?>
+    </div>
 
 
 
