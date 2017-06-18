@@ -5,7 +5,7 @@ Template Name: Organisationen
 ?>
 
 <?php get_header(); ?>
-<?php include_once("analyticstracking.php") ?>
+
 </div> <!-- End of container div -->
 
 <!-- Header -->

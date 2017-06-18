@@ -15,7 +15,6 @@ $the_query = new WP_Query( $employees );
 
 
 <?php get_header(); ?>
-<?php include_once("analyticstracking.php") ?>
 </div> <!-- End of container div -->
 
 <!-- Header -->

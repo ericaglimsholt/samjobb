@@ -3,7 +3,7 @@
 Template Name: SFI
 */
 ?>
-<?php include_once("analyticstracking.php") ?>
+
 <?php get_header(); ?>
 
 </div> <!-- End of container div -->
@@ -44,15 +44,25 @@ Template Name: SFI
                 <?php endwhile; ?>
             <?php endif; ?>
         </div>
-        <div class="col-md-4 info">
+        <div class="col-md-4 info employee-contact">
             <h2><?php the_field('title_info_contact'); ?></h2>
-            <?php if( have_rows('contact_info') ): ?>
-                <?php while ( have_rows('contact_info') ) : the_row(); ?>
-                    <img class="info-contact-img" src="<?php the_sub_field('info_contact_img'); ?>" />
-                    <p><?php the_sub_field('info_contact_name_phone'); ?></p>
-                    <p><?php the_sub_field('info_contact_email'); ?></p>
-                <?php endwhile; ?>
-            <?php endif; ?>
+            <?php if( have_rows('choose_employee') ): ?>
+              <?php while( have_rows('choose_employee') ): the_row();   ?>
+                  <?php $posts = get_sub_field('choose_employee'); if( $posts ): ?>
+                    <?php foreach( $posts as $post): ?>
+                        <img src="<?php the_field('image'); ?>" alt="">
+                        <p class="employee-name"><?php the_field('name'); ?></p>
+
+                        <div class="same-line">
+                            <p class="employee-work"><?php the_field('work_area'); ?></p>
+                            <a href="mailto:<?php the_field('mail_address'); ?>?" target="_top">
+                                 <button type="button" name="button-mini">Maila mig</button>
+                             </a>
+                        </div>
+                    <?php endforeach; ?>
+                   <?php wp_reset_postdata();  ?>
+                  <?php endif; ?>
+            <?php endwhile; endif?>
         </div>
     </div>
 

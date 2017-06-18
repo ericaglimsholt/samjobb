@@ -3,7 +3,6 @@
 Template Name: Hem
 */
 ?>
-<?php include_once("analyticstracking.php") ?>
 <?php get_header(); ?>
 
 </div> <!-- End of container div -->
