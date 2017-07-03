@@ -22,7 +22,7 @@
     </head>
     <body>
 
-        <nav class="navbar navbar-toggleable-md navbar-light bg-faded mb-3">
+        <nav class="navbar navbar-toggleable-md navbar-light bg-faded ">
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button><!-- /navbar-toggler -->
