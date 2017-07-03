@@ -9,10 +9,10 @@
                 <p>Vårt uppdrag är att hjälpa personer som står utanför arbetsmarknaden att få en meningsfull sysselsättning samt stöd och hjälp på vägen till ett arbete.</p>
                 <h5>Följ SamJobb</h5>
                 <a target="_blank" href="https://www.facebook.com/samjobb/?fref=ts">
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/img/facebook-icon" alt="">
+                    <img src="<?php echo get_template_directory_uri() ?>/assets/img/facebook-icon.png" alt="">
                 </a>
                 <a target="_blank" href="https://www.instagram.com/samjobb.se/">
-                    <img src="<?php echo get_template_directory_uri() ?>/assets/img/instagram-icon" alt="">
+                    <img src="<?php echo get_template_directory_uri() ?>/assets/img/instagram-icon.png" alt="">
                 </a>
             </div>
             <div class="col-md-4 footer">
