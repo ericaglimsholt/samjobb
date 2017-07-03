@@ -42,6 +42,8 @@ $the_query = new WP_Query( $employees );
             <p class="employee-work"><?php the_field('work_area'); ?></p>
             <hr>
             <p class="employee-description"><?php the_field('description'); ?></p>
+            <p class="employee-description">Telefonnummer: <?php the_field('phone_number'); ?></p>
+
 
             <a href="mailto:<?php the_field('mail_address'); ?>?" target="_top">
                 <button type="button" name="button-mini">Maila mig</button>
