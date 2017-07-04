@@ -50,12 +50,13 @@ Template Name: SFI
               <?php while( have_rows('choose_employee') ): the_row();   ?>
                   <?php $posts = get_sub_field('choose_employee'); if( $posts ): ?>
                     <?php foreach( $posts as $post): ?>
-                        <img src="<?php the_field('image'); ?>" alt="">
+                        <img class="small-img" src="<?php the_field('image'); ?>" alt="">
                         <p class="employee-name"><?php the_field('name'); ?></p>
-
+                        <p class="employee-work"><?php the_field('work_area'); ?></p>
                         <div class="same-line">
-                            <p class="employee-work"><?php the_field('work_area'); ?></p>
+
                             <p class="employee-description">Telefonnummer: <?php the_field('phone_number'); ?></p>
+
                             <a href="mailto:<?php the_field('mail_address'); ?>?" target="_top">
                                  <button type="button" name="button-mini">Maila mig</button>
                              </a>

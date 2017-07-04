@@ -7,6 +7,11 @@
 
         <!-- Our main CSS -->
         <link rel="stylesheet" href="<?php wp_enqueue_style( 'style', get_stylesheet_uri() ); ?>">
+
+        <link rel="stylesheet" href="<?php wp_register_style( 'flexslider', get_stylesheet_directory_uri() . '/assets/styles/flexslider.css' ); ?>">
+
+
+
         <?php wp_head(); ?>
 
         <!-- Google fonts-->
@@ -15,6 +20,7 @@
         <!-- Bootstrap CSS -->
        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 
+
         <title>Samjobb</title>
 
         <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -22,7 +28,8 @@
     </head>
     <body>
 
-        <nav class="navbar navbar-toggleable-md navbar-light bg-faded ">
+        <nav class="navbar fixed-top navbar-toggleable-md navbar-light bg-faded">
+
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button><!-- /navbar-toggler -->

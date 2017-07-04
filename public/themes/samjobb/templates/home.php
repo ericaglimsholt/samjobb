@@ -51,22 +51,41 @@ Template Name: Hem
         </div>
     </div>
 
+    <div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/sv_SE/sdk.js#xfbml=1&version=v2.9";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <div class="container news">
     <!-- SnapWidget -->
     <h2>Senaste från våra sociala medier</h2>
-<script src="https://snapwidget.com/js/snapwidget.js"></script>
-<iframe src="https://snapwidget.com/embed/396705" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; "></iframe>
-</div>
+    <div class="row">
+        <div class="col-md-6">
+            <script src="https://snapwidget.com/js/snapwidget.js"></script>
+                        <!-- SnapWidget -->
+            <iframe src="https://snapwidget.com/embed/404734" class="snapwidget-widget" allowTransparency="true" frameborder="0" scrolling="no" style="border:none; overflow:hidden; width:100%; height:100%;"></iframe>
+        </div>
+
+        <div class="col-md-6">
+            <div class="fb-page"
+                data-width="700"
+            data-href="https://www.facebook.com/SamJobb/" data-tabs="timeline" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false"><blockquote cite="https://www.facebook.com/SamJobb/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/SamJobb/">Samjobb</a></blockquote></div>
+            </div>
+        </div>
+    </div>
+
+
+
 <hr>
+
 <div class="container">
+
     <div class="row partners">
-        <?php if( have_rows('logotypes_partners') ): ?>
-            <?php while ( have_rows('logotypes_partners') ) : the_row(); ?>
-                    <div class="col-md-2 partners">
-                        <img src="<?php the_sub_field('img_partners'); ?>" alt="">
-                    </div>
-            <?php endwhile; ?>
-        <?php endif; ?>
+        <?php the_field('slider_short'); ?>
     </div>
 
 
