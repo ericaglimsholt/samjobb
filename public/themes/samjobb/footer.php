@@ -1,36 +1,50 @@
-    <!-- End of container div, starts in header.php -->
-    </div>
+<?php
+/*
+Template Name: Footer
+*/
+?>
+
+<?php
+$footer = array (
+    'numberposts'	=> -1,
+    'post_type'		=> 'footer',
+);
+
+$the_query = new WP_Query( $footer );
+?>
+
+<!-- End of container div, starts in header.php -->
+</div>
 
 <div class="footer">
     <div class="container">
         <div class="row">
-            <div class="col-md-4 footer">
+            <?php if( $the_query->have_posts() ): ?>
+                <?php while( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                <div class="col-md-4 footer">
+
                 <h5>Om SamJobb</h5>
-                <p>Vårt uppdrag är att hjälpa personer som står utanför arbetsmarknaden att få en meningsfull sysselsättning samt stöd och hjälp på vägen till ett arbete.</p>
+                <p><?php the_field('about-samjobb'); ?></p>
                 <h5>Följ SamJobb</h5>
-                <a target="_blank" href="https://www.facebook.com/samjobb/?fref=ts">
+                <a target="_blank" href="<?php the_field('facebook-link'); ?>">
                     <img src="<?php echo get_template_directory_uri() ?>/assets/img/facebook-icon.png" alt="">
                 </a>
-                <a target="_blank" href="https://www.instagram.com/samjobb.se/">
+                <a target="_blank" href="<?php the_field('instagram-link'); ?>">
                     <img src="<?php echo get_template_directory_uri() ?>/assets/img/instagram-icon.png" alt="">
                 </a>
             </div>
             <div class="col-md-4 footer">
                 <h5>Öppetider</h5>
-                <p>
-                    Lorem ipsum dolor sit amet, onsectetu eiusmo dostadip isicing elit, sed do eiusmod is tempinc idiuntm ut lorem ipsome do or sit amt la bore.
-                    <br><br>
-                    Monday- Friday. . . . . . . . . . . . . 8 AM - 5PM<br>
-                    Sunday. . . . . . . . . . . . . . . . . . . . . 12 AM - 5PM<br>
-                    Saturday . . . . . . . . . . . . . . . . . . Close
-                </p>
-
+                <p><?php the_field('opening-hours'); ?></p>
             </div>
             <div class="col-md-4 footer">
                 <h5>Kontakta oss</h5>
                 <?php echo do_shortcode( '[contact-form-7 id="292" title="Footer kontaktformulär"]' ); ?>
             </div>
         </div>
+        <?php endwhile; ?>
+    <?php endif; ?>
+    <?php wp_reset_query(); ?>
     </div>
 </div>
 
