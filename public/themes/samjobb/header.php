@@ -8,10 +8,6 @@
         <!-- Our main CSS -->
         <link rel="stylesheet" href="<?php wp_enqueue_style( 'style', get_stylesheet_uri() ); ?>">
 
-        <link rel="stylesheet" href="<?php wp_register_style( 'flexslider', get_stylesheet_directory_uri() . '/assets/styles/flexslider.css' ); ?>">
-
-
-
         <?php wp_head(); ?>
 
         <!-- Google fonts-->
@@ -19,6 +15,8 @@
 
         <!-- Bootstrap CSS -->
        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+
+       <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
 
 
         <title>Samjobb</title>

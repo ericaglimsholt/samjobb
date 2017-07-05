@@ -51,14 +51,16 @@ Template Name: Hem
         </div>
     </div>
 
+
     <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/sv_SE/sdk.js#xfbml=1&version=v2.9";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
+
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/sv_SE/sdk.js#xfbml=1&version=v2.9";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
 
 <div class="container news">
     <!-- SnapWidget -->
@@ -84,11 +86,25 @@ Template Name: Hem
 
 <div class="container">
 
-    <div class="row partners">
-        <?php the_field('slider_short'); ?>
-    </div>
-
-
+<?php $images = get_field('logotypes'); ?>
+<div class="row multiple-items partners">
+    <?php if( $images ): ?>
+            <?php foreach( $images as $image ): ?>
+                <div class="col-md-2 partners">
+                    <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                </div>
+            <?php endforeach; ?>
+    <?php endif; ?>
+</div>
 
 
 <?php get_footer(); ?>
+<script>
+$('.multiple-items').slick({
+  slidesToShow: 6,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+
+});
+</script>
