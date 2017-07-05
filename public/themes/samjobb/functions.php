@@ -16,6 +16,9 @@ function themeprefix_slick_enqueue_scripts_styles(){
 // Register employee custom post type.
 require get_template_directory().'/posttypes/employee.php';
 
+// Register footer custom post type.
+require get_template_directory().'/posttypes/footer.php';
+
 // Add meny in apperance
 function register_my_menus() {
   register_nav_menus(
